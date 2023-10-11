@@ -1,0 +1,59 @@
+stages:
+  - pull
+  - build
+  - deploy
+
+refresh:
+  stage: pull
+  script:
+    - echo "Refreshing repository"
+    - echo "Pull from repository..."
+    - cd "$ROOT_DIRECTORY"/"$BASE_REPOSITORY"
+    - pwd
+    - git restore .
+    - git pull http://"$ROOT_USER":"$ROOT_PASSWORD"@gitlabsie.upea.bo/"$GROUP"/"$BASE_REPOSITORY".git main
+
+building:
+  stage: build
+  script:
+    - echo "Building start..."
+    - cd "$ROOT_DIRECTORY"/"$BASE_REPOSITORY"
+    - pwd
+    - echo "Instalar dependencias del proyecto"
+    - npm install
+
+    - echo "Deploy para Ingenieria Electronica"
+    - printf 'VUE_APP_ROOT_API="https://serviciopagina.upea.bo/"\nVUE_APP_ID_INSTITUCION=26\nVUE_APP_ID_CARRERA=22\n' > .env
+    - cat .env
+    - npm run build
+    - if [ -d 'web_electronica' ]; then rm -r web_electronica ; fi
+    - mv dist web_electronica
+
+    - echo "Deploy para Ingenieria Textil"
+    - printf 'VUE_APP_ROOT_API="https://serviciopagina.upea.bo/"\nVUE_APP_ID_INSTITUCION=29\nVUE_APP_ID_CARRERA=25\n' > .env
+    - cat .env
+    - npm run build
+    - if [ -d 'web_textil' ]; then rm -r web_textil ; fi
+    - mv dist web_textil
+
+    - echo "Deploy para Ingenieria Electrica"
+    - printf 'VUE_APP_ROOT_API="https://serviciopagina.upea.bo/"\nVUE_APP_ID_INSTITUCION=27\nVUE_APP_ID_CARRERA=27\n' > .env
+    - cat .env
+    - npm run build
+    - if [ -d 'web_electrica' ]; then rm -r web_electrica ; fi
+    - mv dist web_electrica
+
+    - echo "Deploy para Ingenieria Ambiental"
+    - printf 'VUE_APP_ROOT_API="https://serviciopagina.upea.bo/"\nVUE_APP_ID_INSTITUCION=30\nVUE_APP_ID_CARRERA=30\n' > .env
+    - cat .env
+    - npm run build
+    - if [ -d 'web_ambiental' ]; then rm -r web_ambiental ; fi
+    - mv dist web_ambiental
+
+    - rm .env
+
+deployment:
+  stage: deploy
+  script:
+    - echo "Deploy..."
+    - pwd

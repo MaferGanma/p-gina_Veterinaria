@@ -1,25 +1,25 @@
 <template>
     <!-- Topbar Start -->
-    <div class="container-fluid pt-3 d-none d-lg-block bg-color-2">
+    <div class="container-fluid pt-3 d-none d-lg-block" style="background:rgba(0, 0, 0, 0.9);">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
                     <div class="d-inline-flex align-items-center">
-                      <a :href='"mailto:"+Institucion.institucion_correo1'><p><i class="fa fa-envelope mr-2"></i>{{ Institucion.institucion_correo1 }}</p></a>
+                      <a :href='"mailto:"+Institucion.institucion_correo1' class="text-white"><p><i class="fa fa-envelope mr-2"></i>{{ Institucion.institucion_correo1 }}</p></a>
                         <p class="text-body px-3">|</p>
-                        <a :href='"tel:"+Institucion.institucion_celular1'><p><i class="fa fa-phone-alt mr-2"></i>{{ Institucion.institucion_celular1 }}</p></a>
+                        <a :href='"tel:"+Institucion.institucion_celular1' class="text-white"><p><i class="fa fa-phone-alt mr-2"></i>{{ Institucion.institucion_celular1 }}</p></a>
                     </div>
                 </div>
                 <div class="col-lg-6 text-center text-lg-right">
                     <div class="d-inline-flex align-items-center">
-                        <a class="text-primary px-3" target="_blank" :href="Institucion.institucion_facebook">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a class="text-primary px-3" target="_blank" :href="Institucion.institucion_twitter">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a class="text-primary pl-3" target="_blank" :href="Institucion.institucion_youtube">
+                        <a class="text-white px-3" target="_blank" :href="Institucion.institucion_facebook">
+                            <i class="fab fa-facebook-f textxt" ></i>
+                        </a>  
+                        <a class="text-white px-3" target="_blank" :href="Institucion.institucion_youtube">
                             <i class="fab fa-youtube"></i>
+                        </a>
+                        <a class="text-white pl-3" target="_blank" href="http://administracionpaginas.upea.edu.bo/">
+                            <i class="fa fa-user" target="_blank"></i>
                         </a>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
     <div class="container-fluid nav-bar p-0" style="position: absolute;">
         <div class="position-relative p-px-lg-3" style="z-index: 9;">
             <nav class="navbar navbar-expand-lg  navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5">
-              <img class="filtro-logo" :src=" url_api + '/InstitucionUpea/' + Institucion.institucion_logo"
+              <img class="filtro-logo animacion-logo-1" :src=" url_api + '/InstitucionUpea/' + Institucion.institucion_logo"
                 alt="img"
                 width="80"
                 height="80"                 
@@ -77,7 +77,7 @@
                                 <router-link to="/misionvision" class="dropdown-item">MISIÓN Y VISIÓN</router-link>
                                 <router-link to="/perfil" class="dropdown-item">PERFIL PROFESIONAL</router-link>
                                 <router-link to="/plan" class="dropdown-item">PLAN DE ESTUDIOS</router-link>
-                                <router-link to="/autoridades" class="dropdown-item">NUESTRAS AURIDADES</router-link>
+                                <router-link to="/autoridades" class="dropdown-item">NUESTRAS AUTORIDADES</router-link>
                             </div>
                         </div>
                         <div class="nav-item dropdown">
@@ -92,7 +92,13 @@
             </nav>
         </div>
     </div>
-
+    
+<div class="red">
+     <div id="facebook"><a :href="Institucion.institucion_facebook" class="fab fa-facebook-f" target="_blank"></a></div>
+     <div id="youtube"><a :href="Institucion.institucion_youtube"  class="fab fa-youtube" target="_blank"></a></div>
+     <div id="whatsapp"><a :href="'https://wa.me/'+Institucion.institucion_celular1"  class="fab fa-whatsapp" target="_blank"></a></div>
+     <div id="correo"><a :href="'mailto:'+Institucion.institucion_correo1" class="fas fa-envelope-square" ></a></div>
+</div>
 </template>
 
 <script>

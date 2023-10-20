@@ -1,7 +1,7 @@
 <template>
 
       <!-- Header Start -->
-      <div class="container-fluid page-header banner-img">
+      <div class="container-fluid page-header-perfil ">
         <div class="container">
             <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
                 <h3 class="display-4 text-white text-uppercase">PERFIL PROFESIONAL</h3>
@@ -21,9 +21,9 @@
               </div>
           </div>
       </div>
-      <button style="left: 0;" class="btn-color" @click="$router.go(-1)">
-              <i class=""></i> Volver atrás
-              </button>
+      <button style="left: 0; position: relative;" class="btn-primary" @click="$router.go(-1)" >
+                        <i class=""></i> Volver atrás
+                        </button>
   </div>
 
 </template>

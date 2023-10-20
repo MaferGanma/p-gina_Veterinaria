@@ -1,16 +1,31 @@
 <template>
   <div>
     <div class="fondo">
-    <div class="background-fondo-1" style="left: 50%;" >   
-      <div>
+      <div v-if="Institucion.institucion_id==26">   
+    <img class="" src="/assets/img/electronica.png" alt="" style="position: absolute; opacity: 0.5;right: 0; bottom: 0;"> 
+    </div>
+    <div v-if="Institucion.institucion_id==30">   
+    <img src="/assets/img/fondo-ambiental.png" alt="" style="position: absolute; opacity: 0.7;right: 0; bottom: 25px;border-radius:50%; "> 
+    </div>
+    <div v-if="Institucion.institucion_id==29" >
+    <img src="/assets/img/fondo-textil.jpg" alt="" style="position: absolute; opacity: 0.5;right: 0; bottom: 0;border-radius:50%"> 
+    </div>
+    <div v-if="Institucion.institucion_id==27" >
+    <img src="/assets/img/img-electrica-1.jpg" alt="" style="position: absolute; opacity: 0.5;right: 0; bottom: 0;border-radius:50% ;width: 700px;"> 
+    </div>
+    <!--<div v-if="Institucion.institucion_id==27" >   
+    <img src="/assets/img/electrica.png" alt="" style="position: absolute; opacity: 0.5;right: 0; bottom: 0;"> 
+    </div>-->
+    <div class="background-fondo-1" >  
+      <div >    
       <img class="img-log filtro-logo" :src=" url_api + '/InstitucionUpea/' + Institucion.institucion_logo"
                 alt="img"
                 width="200"
                 height="200"                 
               />
             </div>
-    </div></div>
-  
+    </div>  
+  </div>
     <HeaderCustom />
     <router-view />
     <FooterCustom /> 
@@ -116,9 +131,7 @@ export default{
             this.Institucion.colorinstitucion[0].color_terciario
           );
         }
-        this.imgheader()
-        this.setImages(res.data.Descripcion.portada);
-        this.galeria(res.data.Descripcion.portada);
+        this.imgheader();
       } catch (error) {
         console.log(error);
         if (error.code == "ERR_NETWORK") {
@@ -214,19 +227,37 @@ export default{
       this.$store.commit("loading");
     },*/
 
-      imgheader() {
-      let img= '/assets/img/img-header2.jpg';
+    imgheader() {
       let img_electronica= '/assets/img/electronica-header2.jpg';
+      let img_ambiental = "/assets/img/img-ambiental.jpeg";
+      let img_textil = "/assets/img/img-textil.jpg";
+      let img_electrica= '/assets/img/img-electricidad.jpg';
+      var elemento= document.querySelector(".banner-img");
+          //ingenieria electronica
           if(this.Institucion.institucion_id == 26)
-          {
-            document.querySelector(".banner-img")
-            .setAttribute("style", 'background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("' + img_electronica + '");');
+          { 
+            elemento.setAttribute("style", 'background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("' + img_electronica + '");');
           }else
           {
-            document.querySelector(".banner-img")
-            .setAttribute("style", 'background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("' + img + '");');
+            //ingenieria ambiental
+            if(this.Institucion.institucion_id == 30)
+            elemento.setAttribute("style", 'background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("' + img_ambiental + '");');
+            else{
+              //ingenieria electrica
+              if(this.Institucion.institucion_id ==27)
+              {
+                elemento.setAttribute("style", 'background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("' + img_electrica + '");');
+              }else{
+                //ingenieria textil
+                if(this.Institucion.institucion_id == 29 )
+                {
+                  elemento.setAttribute("style", 'background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("' + img_textil + '");');
+                }
+              }
+            }
           }
     },
+  
     createdComponents() {
       this.getInstitucion();
       this.getInstitucionUpea();

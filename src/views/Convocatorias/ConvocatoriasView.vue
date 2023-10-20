@@ -225,6 +225,7 @@ export default {
       } catch (error) {
         console.log(error);
       }
+      this.imgheader();
     },
     async getConvocatorias() {
       try {
@@ -296,6 +297,36 @@ export default {
       } else {
         this.searchGet = false;
       }
+    },
+    imgheader() {
+      let img_electronica= '/assets/img/electronica-header2.jpg';
+      let img_ambiental = "/assets/img/img-ambiental.jpeg";
+      let img_textil = "/assets/img/img-textil.jpg";
+      let img_electrica= '/assets/img/img-electricidad.jpg';
+      var elemento= document.querySelector(".banner-img");
+          //ingenieria electronica
+          if(this.Institucion.institucion_id == 26)
+          { 
+            elemento.setAttribute("style", 'background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("' + img_electronica + '");');
+          }else
+          {
+            //ingenieria ambiental
+            if(this.Institucion.institucion_id == 30)
+            elemento.setAttribute("style", 'background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("' + img_ambiental + '");');
+            else{
+              //ingenieria electrica
+              if(this.Institucion.institucion_id ==27)
+              {
+                elemento.setAttribute("style", 'background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("' + img_electrica + '");');
+              }else{
+                //ingenieria textil
+                if(this.Institucion.institucion_id == 29 )
+                {
+                  elemento.setAttribute("style", 'background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("' + img_textil + '");');
+                }
+              }
+            }
+          }
     },
   },
   

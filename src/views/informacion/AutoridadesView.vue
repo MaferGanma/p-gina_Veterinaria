@@ -1,7 +1,7 @@
 <template>
 
     <!-- Header Start -->
-    <div class="container-fluid page-header banner-img">
+    <div class="container-fluid page-header-historia">
         <div class="container">
             <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
                 <h3 class="display-4 text-white text-uppercase">NUESTRAS AUTORIDADES</h3>
@@ -13,10 +13,15 @@
     </div>
     <!-- Header End -->
 
-  <div class="container-background-5" style="position: relative;">
-              <div class="container" style="padding: 20px;">
-                <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-6 pb-2" v-for="(autoridad, id_aut) of InstitucionUpea.autoridad"
+   <!-- Team Start -->
+   <div class="container-fluid py-5 paused">
+        <div class="container pt-5 pb-3">
+            <div class="text-center mb-3 pb-3">
+                <h6 class="text-primary text-uppercase animacion-titulo anim-fade-in" style="letter-spacing: 5px;">AUTORIDADES</h6>
+                <h1>Nuestras Autoridades</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-6 pb-2 anim-fade-in" v-for="(autoridad, id_aut) of InstitucionUpea.autoridad"
             :key="id_aut">
                     <div class="team-item bg-white mb-4">
                         <div class="team-img position-relative overflow-hidden">
@@ -28,32 +33,34 @@
                             </div>
                         </div>
                         <div class="text-center py-4">
-                            <h5 class="text-truncate" style="white-space: none;">{{autoridad.nombre_autoridad}}</h5>
+                            <h5 class="text-truncate">{{autoridad.nombre_autoridad}}</h5>
                             <p class="m-0">{{autoridad.cargo_autoridad}}</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 pb-2" v-for="(autoridad, id_aut) of Institucion.autoridad"
+                <div class="col-lg-4 col-md-4 col-sm-6 pb-2 anim-fade-in" v-for="(autoridad, id_aut) of Institucion.autoridad"
             :key="id_aut">
                     <div class="team-item bg-white mb-4">
                         <div class="team-img position-relative overflow-hidden">
                             <img class="img-fluid w-100" :src="url_api +
                              '/InstitucionUpea/Autoridad/' +
                                  autoridad.foto_autoridad " alt="">
-                           
+                            <div class="team-social">
+                                <a class="btn btn-outline-primary btn-square" :href="autoridad.twiter_autoridad"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-outline-primary btn-square" :href="autoridad.facebook_autoridad"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-outline-primary btn-square" :href="'https://wa.me/+'+autoridad.celular_autoridad"><i class="fab fa-whatsapp"></i></a>
+                            </div>
                         </div>
                         <div class="text-center py-4">
-                            <h5 class="" style="white-space: none;">{{autoridad.nombre_autoridad}}</h5>
-                            <p class="m-0">{{autoridad.cargo_autoridad}}</p>     
+                            <h5 class="text-truncate">{{autoridad.nombre_autoridad}}</h5>
+                            <p class="m-0">{{autoridad.cargo_autoridad}}</p>
                         </div>
                     </div>
                 </div>
             </div>
-                <button style="left: 0;" class="btn-primary" @click="$router.go(-1)">
-                        <i class=""></i> Volver atrás
-                        </button>
-            </div>
-  </div>
+        </div>
+    </div>
+    <!-- Team End -->
 </template>
 
 

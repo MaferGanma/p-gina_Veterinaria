@@ -1,6 +1,11 @@
 (function ($) {
     "use strict";
-    
+    window.addEventListener("load",function(){
+        var element = document.getElementById("loader-wrapper");
+        var contenedor = this.document.getElementById("loader-wrapper");
+        contenedor.style.display = 'none';
+        element.style.display = 'none';
+    })
     // Dropdown on mouse hover
     $(document).ready(function () {
         function toggleNavbarMethod() {

@@ -1,5 +1,5 @@
 <template>
-       <div class="container-fluid page-header banner-img">
+       <div class="container-fluid page-header-plan ">
         <div class="container">
             <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
                 <h3 class="display-4 text-white text-uppercase">PLAN DE ESTUDIOS</h3>

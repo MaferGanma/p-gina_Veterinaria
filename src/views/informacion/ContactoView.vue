@@ -23,8 +23,8 @@
                         </div>
                         <div class="d-flex flex-column">
                             <h5 class="">Correo Electronico</h5>
-                            <p class="m-0 text-white">{{ Institucion.institucion_correo1 }}</p>
-                            <p class="m-0 text-white">{{ Institucion.institucion_correo2 }}</p>
+                            <p class="m-0 " style="opacity: 0.5;">{{ Institucion.institucion_correo1 }}</p>
+                            <p class="m-0 ">{{ Institucion.institucion_correo2 }}</p>
                         </div>
                     </div>
                 </div>
@@ -35,8 +35,8 @@
                         </div>
                         <div class="d-flex flex-column">
                             <h5 class="">Celular</h5>
-                            <p class="m-0 text-white">{{ Institucion.institucion_celular1 }}</p>
-                            <p class="m-0 text-white">{{ Institucion.institucion_celular2 }}</p>
+                            <p class="m-0 ">{{ Institucion.institucion_celular1 }}</p>
+                            <p class="m-0 ">{{ Institucion.institucion_celular2 }}</p>
                         </div>
                     </div>
                 </div>
@@ -47,7 +47,7 @@
                         </div>
                         <div class="d-flex flex-column">
                             <h5 class="">Ubicación</h5>
-                            <p class="m-0 text-white">{{Institucion.institucion_direccion}}</p>
+                            <p class="m-0 ">{{Institucion.institucion_direccion}}</p>
                         </div>
                     </div>
                 </div>
@@ -100,10 +100,42 @@ export default {
       } catch (error) {
         console.log(error);
       }
+      this.imgheader();
+    },
+    imgheader() {
+      let img_electronica= '/assets/img/electronica-header2.jpg';
+      let img_ambiental = "/assets/img/img-ambiental.jpeg";
+      let img_textil = "/assets/img/img-textil.jpg";
+      let img_electrica= '/assets/img/img-electricidad.jpg';
+      var elemento= document.querySelector(".banner-img");
+          //ingenieria electronica
+          if(this.Institucion.institucion_id == 26)
+          { 
+            elemento.setAttribute("style", 'background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("' + img_electronica + '");');
+          }else
+          {
+            //ingenieria ambiental
+            if(this.Institucion.institucion_id == 30)
+            elemento.setAttribute("style", 'background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("' + img_ambiental + '");');
+            else{
+              //ingenieria electrica
+              if(this.Institucion.institucion_id ==27)
+              {
+                elemento.setAttribute("style", 'background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("' + img_electrica + '");');
+              }else{
+                //ingenieria textil
+                if(this.Institucion.institucion_id == 29 )
+                {
+                  elemento.setAttribute("style", 'background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("' + img_textil + '");');
+                }
+              }
+            }
+          }
     },
   },
   created() {
     this.getLinks();
+    
   },
   mounted() {
     if (this.getter) {

@@ -5,13 +5,25 @@
             <div class="col-lg-3 col-md-6 mb-5">
                 <a href="/" class="navbar-brand animacion-titulo">
                     <h2 class="text-primary">{{Institucion.institucion_nombre}}</h2>
-                </a>
-                <p>Sed ipsum clita tempor ipsum ipsum amet sit ipsum lorem amet labore rebum lorem ipsum dolor. No sed vero lorem dolor dolor</p>
+                </a>         
                 <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">SÍGANOS</h6>
                 <div class="d-flex justify-content-start">
                     <a class="btn btn-outline-primary btn-square mr-2" :href="Institucion.institucion_twitter" target="_blank"><i class="fab fa-twitter"></i></a>
                     <a class="btn btn-outline-primary btn-square mr-2" :href="Institucion.institucion_facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
                     <a class="btn btn-outline-primary btn-square mr-2" :href="Institucion.institucion_youtube" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="d-flex justify-content-start">
+                    <img class="filtro-logo animacion-logo-1" :src=" url_api + '/InstitucionUpea/' + Institucion.institucion_logo"
+                alt="img"
+                width="80"
+                height="80"                 
+              />
+              <img class="filtro-logo animacion-logo-1" :src=" url_api + '/InstitucionUpea/' + InstitucionUpea.institucion_logo"
+                alt="img"
+                width="80"
+                height="80" style="animation-delay: 1s;"                  
+              />
+                    
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
@@ -46,12 +58,18 @@
     </div>
     <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
         <div class="row">
-            <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
+            <div class="col-lg-4 text-center text-md-left mb-3 mb-md-0">
                 <p class="m-0 text-white-50">Copyright &copy; <a href="#">{{ Institucion.institucion_nombre }}</a>
                 </p>
             </div>
-            <div class="col-lg-6 text-center text-md-right">
-                <p class="m-0 text-white-50">Designed by <a href="https://htmlcodex.com">HTML Codex</a>
+            <div class="col-lg-4 text-center">
+                <img class="filtro-logo animacion-logo-sie" src="/assets/img/logo-sie.png"
+                alt="img"
+                width="80" style="animation-delay: 1s;filter:drop-shadow(2px 4px 6px rgb(5, 28, 200))"                  
+              />
+            </div>
+            <div class="col-lg-4 text-center text-md-right">
+                <p class="m-0 text-white-50">Designed by <a href="https://sie.upea.bo">GAO-SIE</a>
                 </p>
             </div>
         </div>
@@ -124,7 +142,7 @@ import { mapState } from "vuex";
 export default {
   name: "footerView",
   computed: {
-    ...mapState(["Institucion", "MenuConv", "MenuCur", "url_api"]),
+    ...mapState(["Institucion", "MenuConv", "MenuCur", "url_api", "InstitucionUpea"]),
   },
   methods: {},
 };

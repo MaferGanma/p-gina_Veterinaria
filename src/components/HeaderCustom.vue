@@ -87,6 +87,7 @@
                             </div>
                         </div>
                         <router-link to="/contacto" class="nav-item nav-link">CONTACTOS</router-link>
+                        <router-link to="/congreso" class="nav-item nav-link">CONGRESO</router-link>
                     </div>
                 </div>
             </nav>

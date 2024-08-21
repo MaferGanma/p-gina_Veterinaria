@@ -143,7 +143,7 @@
 
                 <!-- Recent Post Start -->
                 <div class="mb-5">
-                    <h3 class="font-weight-bold mb-4">Convocatorias</h3>
+                    <h3 class="font-weight-bold mb-4">enojada</h3>
                     <div class="d-flex mb-3">
                         <img class="img-fluid" src="@/assets/img/blog-1.jpg" style="width: 80px; height: 80px;" alt="">
                         <div class="d-flex align-items-center border border-left-0 px-3" style="height: 80px;">

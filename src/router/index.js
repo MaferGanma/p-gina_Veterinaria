@@ -104,6 +104,11 @@ const routes = [
         component: () => import('@/views/informacion/ContactoView.vue')
       },
       {
+        path: '/congreso',
+        name: 'congresoView',
+        component: () => import('@/views/informacion/CongresoView.vue')
+      },
+      {
         path: '/misionvision',
         name: 'misionvisionView',
         component: () => import('@/views/informacion/MisionvisionView.vue')

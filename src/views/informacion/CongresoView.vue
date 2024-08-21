@@ -3,7 +3,7 @@
     <div class="container-fluid page-header banner-img">
           <div class="container">
               <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
-                  <h3 class="display-4 text-white text-uppercase">CONGRESO</h3>
+                <h3 class="display-4 text-white text-uppercase" style="text-align: center;">CONGRESO NACIONAL de INDUSTRIA TEXTIL y NANOTECNOLOGÍA</h3>
                   <div class="d-inline-flex text-white">
                       <p class="m-0 text-uppercase"><a class="text-white" href="/">INICIO</a></p>
                       <i class="fa fa-angle-double-right pt-1 px-3"></i>
@@ -14,6 +14,7 @@
       <!-- Header End -->
      <!-- Feature Start -->
      <div class="container-fluid pb-5" style="padding-top: 100px; position: relative;">
+        <img src="https://nationalzoo.si.edu/sites/default/files/animals/alpaca-01.jpg" alt="Descripción de la imagen" style="display: block; margin-left: auto; margin-right: auto;">
           <div class="container pb-5">
               <div class="row">
                   <div class="col-md-4">
@@ -53,12 +54,12 @@
                   </div>
               </div>
           </div>
-            <iframe
+            <!-- <iframe
               :src="Institucion.institucion_api_google_map"
               width="100%"
               height="600px"
               frameborder="0"
-            ></iframe>
+            ></iframe> -->
       </div>
       <!-- Feature End -->
          

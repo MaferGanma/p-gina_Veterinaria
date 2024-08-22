@@ -91,7 +91,7 @@
 
   <!-- Professional Photos Start -->
   <div class="container mt-5">
-    <h2 class="text-center mb-4">Nuestro Equipo</h2>
+    <h2 class="text-center mb-4">Expositores</h2>
     <div class="row">
       <!-- Iterate over professionals array to display their photos -->
       <div class="col-md-4 mb-4" v-for="(professional, index) in professionals" :key="index">
@@ -117,7 +117,7 @@ export default {
       sopen: false,
       Links: [],
       professionals: [],  // Array to store professional data
-      eventDate: new Date('2024-12-31T23:59:59'),  // Date and time of the event
+      eventDate: new Date('2024-11-18T00:00:00'),  // Updated date and time of the event
 
       days: 0,
       hours: 0,

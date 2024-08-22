@@ -87,7 +87,10 @@
                             </div>
                         </div>
                         <router-link to="/contacto" class="nav-item nav-link">CONTACTOS</router-link>
-                        <router-link to="/congreso" class="nav-item nav-link">CONGRESO</router-link>
+                        
+                        <router-link v-if="Institucion.institucion_correo1 === 'ingtextil@gmail.com'" 
+                                    to="/congreso" class="nav-item nav-link" > CONGRESO
+                        </router-link>
                     </div>
                 </div>
             </nav>
@@ -193,4 +196,8 @@ export default {
     }
   },
 };
+
+
+
+
 </script>

@@ -12,7 +12,7 @@
         </div>
         <!-- Countdown Timer Start -->
         <div class="countdown-timer text-white text-center">
-          <h4 class="mb-3">Faltan para el evento:</h4>
+          <h4 class="mb-3 countdown-title">Faltan para el evento:</h4>
           <div class="d-flex justify-content-center">
             <div class="timer-section">
               <span class="timer-value">{{ days }}</span>
@@ -237,5 +237,9 @@ export default {
 .timer-label {
   display: block;
   font-size: 1rem;
+}
+
+.countdown-title {
+  color: #ffffff; /* Color applied to the text */
 }
 </style>

@@ -12,8 +12,8 @@
         </div>
         <!-- Countdown Timer Start -->
         <div class="countdown-timer text-white text-center">
-          <h4 class="mb-3 countdown-title">Faltan para el evento:</h4>
-          <div class="d-flex justify-content-center">
+          <h4 class="mb-3 countdown-title" v-if="!isEventStarted">Faltan para el evento:</h4>
+          <div class="d-flex justify-content-center" v-if="!isEventStarted">
             <div class="timer-section">
               <span class="timer-value">{{ days }}</span>
               <span class="timer-label">Días</span>
@@ -30,6 +30,10 @@
               <span class="timer-value">{{ seconds }}</span>
               <span class="timer-label">Segundos</span>
             </div>
+          </div>
+          <div v-if="isEventStarted" class="event-message text-white">
+            <h4 class="mb-3 countdown-title">¡El congreso ya comenzó!</h4>
+            <p>El Congreso Nacional de Industria Textil y Nanotecnología se llevará a cabo del 18 al 20 de noviembre.</p>
           </div>
         </div>
         <!-- Countdown Timer End -->
@@ -91,18 +95,10 @@
 
   <!-- Professional Photos Start -->
   <div class="container mt-5">
-    <h2 class="text-center mb-4">Expositores</h2>
+    <!-- <h2 class="text-center mb-4">Expositores</h2> -->
     <div class="row">
       <!-- Iterate over professionals array to display their photos -->
-      <div class="col-md-4 mb-4" v-for="(professional, index) in professionals" :key="index">
-        <div class="card">
-          <img :src="professional.photoUrl" class="card-img-top" alt="Professional Photo">
-          <div class="card-body text-center">
-            <h5 class="card-title">{{ professional.name }}</h5>
-            <p class="card-text">{{ professional.position }}</p>
-          </div>
-        </div>
-      </div>
+      
     </div>
   </div>
   <!-- Professional Photos End -->
@@ -129,6 +125,8 @@ export default {
       m_cur: false,
       m_mas: false,
       m_link: false,
+
+      isEventStarted: false, // Add this property to control event start message
     };
   },
   computed: {
@@ -191,14 +189,16 @@ export default {
     updateCountdown() {
       const now = new Date();
       const timeDiff = this.eventDate - now;
-      
+
       if (timeDiff > 0) {
         this.days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
         this.hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         this.minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
         this.seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+        this.isEventStarted = false;
       } else {
         this.days = this.hours = this.minutes = this.seconds = 0;
+        this.isEventStarted = true;
       }
     }
   },
@@ -241,5 +241,10 @@ export default {
 
 .countdown-title {
   color: #ffffff; /* Color applied to the text */
+}
+
+.event-message {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 </style>

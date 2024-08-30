@@ -46,6 +46,38 @@
   <div class="container-fluid pb-5" style="padding-top: 100px; position: relative;">
     <img src="https://i.imgur.com/VFgwOO3.jpeg" alt="Descripción de la imagen" style="display: block; margin-left: auto; margin-right: auto;">
     <div class="container pb-5">
+  <!-- Additional Features Start -->
+  <div class="container mt-5">
+    <!-- Expositores -->
+    <div class="text-center mb-4">
+    <i class="fa fa-users fa-3x" style="color: #394285;"></i>
+    <h2 class="mt-2">Expositores</h2>
+    <!-- Expositores Photos Start -->
+    <div class="row">
+      <div class="col-md-4" v-for="expositor in expositores" :key="expositor.id">
+        <div class="expositor-card">
+          <img :src="expositor.photo" alt="Expositor" class="img-fluid rounded-circle mb-2">
+          <h4>{{ expositor.name }}</h4>
+          <p>{{ expositor.talkTitle }}</p>
+        </div>
+      </div>
+    </div>
+    <!-- Expositores Photos End -->
+  </div>
+    
+    <!-- Cronograma -->
+    <div class="text-center mb-4">
+      <i class="fa fa-calendar-alt fa-3x" style="color: #394285;"></i>
+      <h2 class="mt-2">Cronograma</h2>
+    </div>
+    
+    <!-- Inscripciones -->
+    <div class="text-center mb-4">
+      <i class="fa fa-pen-alt fa-3x" style="color: #394285;"></i>
+      <h2 class="mt-2">Inscripciones</h2>
+    </div>
+  </div>
+  <!-- Contact Info -->
       <div class="row">
         <div class="col-md-4">
           <div class="d-flex mb-4 mb-lg-0">
@@ -84,24 +116,20 @@
         </div>
       </div>
     </div>
-    <!-- <iframe
+    <!-- Location Icon -->
+    <div class="text-center mb-4">
+      <i class="fa fa-map-marker-alt fa-3x" style="color: #394285;"></i>
+    </div>
+    <!-- Location Title and Map -->
+    <h2 class="text-center mb-4">Ubicación</h2>
+    <iframe
       :src="Institucion.institucion_api_google_map"
       width="100%"
       height="600px"
       frameborder="0"
-    ></iframe> -->
+    ></iframe>
   </div>
   <!-- Feature End -->
-
-  <!-- Professional Photos Start -->
-  <div class="container mt-5">
-    <!-- <h2 class="text-center mb-4">Expositores</h2> -->
-    <div class="row">
-      <!-- Iterate over professionals array to display their photos -->
-      
-    </div>
-  </div>
-  <!-- Professional Photos End -->
 </template>
 
 <script>
@@ -127,6 +155,16 @@ export default {
       m_link: false,
 
       isEventStarted: false, // Add this property to control event start message
+
+      expositores: [
+        { id: 1, name: 'Juan Pérez', talkTitle: 'Innovaciones en IA', photo: require('@/assets/expositores/mision.png') },
+        { id: 2, name: 'Ana Gómez', talkTitle: 'Tendencias en Tecnología', photo: require('@/assets/expositores/exp1.jpg') },
+        { id: 3, name: 'Ana Gómez', talkTitle: 'Tendencias en Tecnología', photo: require('@/assets/expositores/exp1.jpg') },
+        { id: 4, name: 'Ana Gómez', talkTitle: 'Tendencias en Tecnología', photo: require('@/assets/expositores/exp1.jpg') },
+        { id: 5, name: 'Ana Gómez', talkTitle: 'Tendencias en Tecnología', photo: require('@/assets/expositores/exp1.jpg') },
+        { id: 6, name: 'Carlos López', talkTitle: 'El Futuro del Big Data', photo: require('@/assets/img/logo-vid.png') }
+        // Añadir más expositores según sea necesario
+      ]
     };
   },
   computed: {
@@ -178,44 +216,29 @@ export default {
         }
       }
     },
-    async getProfessionals() {
-      try {
-        let res = await this.axios.get(`/api/professionals/${process.env.VUE_APP_ID_INSTITUCION}`);
-        this.professionals = res.data;
-      } catch (error) {
-        console.log(error);
-      }
-    },
     updateCountdown() {
       const now = new Date();
       const timeDiff = this.eventDate - now;
 
-      if (timeDiff > 0) {
-        this.days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-        this.hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        this.minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
-        this.seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
-        this.isEventStarted = false;
-      } else {
-        this.days = this.hours = this.minutes = this.seconds = 0;
+      if (timeDiff <= 0) {
         this.isEventStarted = true;
+        return;
       }
-    }
-  },
-  created() {
-    this.getLinks();
-    this.getProfessionals();  // Fetch professional data
+
+      this.isEventStarted = false;
+      this.days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+      this.hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      this.minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+      this.seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+    },
   },
   mounted() {
-    if (this.getter) {
-      this.getLinks();
-      this.$store.state.getter = false;
-    }
-    this.updateCountdown();
-    setInterval(this.updateCountdown, 1000);  // Update countdown every second
-  },
-}
+    this.getLinks();
+    setInterval(this.updateCountdown, 1000);
+  }
+};
 </script>
+
 
 <style scoped>
 .countdown-timer {
@@ -247,4 +270,24 @@ export default {
   font-size: 1.2rem;
   font-weight: bold;
 }
+/*Expositores Estilos */
+.expositor-card {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.expositor-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+h4 {
+  margin: 10px 0;
+}
+
+p {
+  color: black;
+}
+
 </style>

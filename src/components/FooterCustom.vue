@@ -63,7 +63,7 @@
                 </p>
             </div>
             <div class="col-lg-4 text-center">
-                <img class="filtro-logo animacion-logo-sie" src="/assets/img/logo-sie.png"
+                <img class="filtro-logo animacion-logo-sie" src="https://i.imgur.com/RAwBKD1.png"
                 alt="img"
                 width="80" style="animation-delay: 1s;filter:drop-shadow(2px 4px 6px rgb(5, 28, 200))"                  
               />

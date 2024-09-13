@@ -73,6 +73,153 @@
           <h2 class="mt-2">Cronograma</h2>
         </div>
 
+        <div class="table-container">
+          <h2>Día 1: Lunes 18 de noviembre de 2024</h2>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Actividad</th>
+                <th>Exponente</th>
+                <th>Hora</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Registro y Entrega de Materiales</td>
+                <td>N/A</td>
+                <td>08:00 - 09:00</td>
+              </tr>
+              <tr>
+                <td>Inauguración Oficial</td>
+                <td>N/A</td>
+                <td>09:00 - 09:30</td>
+              </tr>
+              <tr>
+                <td>Tema: Innovaciones en la Industria Textil y su Impacto en la Sostenibilidad</td>
+                <td>[Nombre del experto]</td>
+                <td>09:30 - 10:30</td>
+              </tr>
+              <tr>
+                <td>Coffee Break y Networking</td>
+                <td>N/A</td>
+                <td>10:30 - 11:00</td>
+              </tr>
+              <tr>
+                <td>Tema: Evolución de la Industria Textil en la Era de la Nanotecnología</td>
+                <td>[Nombres de los panelistas]</td>
+                <td>11:00 - 12:30</td>
+              </tr>
+              <tr>
+                <td>Almuerzo</td>
+                <td>N/A</td>
+                <td>12:30 - 13:30</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <br>
+        <div class="table-container">
+          <h2>Día 2: Martes 19 de noviembre de 2024</h2>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Actividad</th>
+                <th>Exponente</th>
+                <th>Hora</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Bienvenida y Apertura del Día 2</td>
+                <td>N/A</td>
+                <td>08:30 - 09:00</td>
+              </tr>
+              <tr>
+                <td>Tema: El Futuro de los Textiles Inteligentes y su Integración en la Vida Cotidiana</td>
+                <td>[Nombre del experto]</td>
+                <td>09:00 - 10:00</td>
+              </tr>
+              <tr>
+                <td>Tema: Sostenibilidad y Economía Circular en la Industria Textil</td>
+                <td>[Nombres de los panelistas]</td>
+                <td>10:00 - 11:30</td>
+              </tr>
+              <tr>
+                <td>Coffee Break y Networking</td>
+                <td>N/A</td>
+                <td>11:30 - 12:00</td>
+              </tr>
+              <tr>
+                <td>Tema: Textiles Funcionales para Aplicaciones Especiales</td>
+                <td>[Nombres de los ponentes]</td>
+                <td>12:00 - 13:30</td>
+              </tr>
+              <tr>
+                <td>Almuerzo</td>
+                <td>N/A</td>
+                <td>13:30 - 14:30</td>
+              </tr>
+              <tr>
+                <td>Taller: Procesos de Fabricación Sostenible en Textiles de Alta Tecnología</td>
+                <td>[Nombre del instructor]</td>
+                <td>14:30 - 16:00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <br>
+        <div class="table-container">
+          <h2>Día 3: Miércoles 20 de noviembre de 2024</h2>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Actividad</th>
+                <th>Exponente</th>
+                <th>Hora</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Bienvenida y Apertura del Último Día</td>
+                <td>N/A</td>
+                <td>08:30 - 09:00</td>
+              </tr>
+              <tr>
+                <td>Tema: Desafíos Regulatorios y Normativas en el Uso de Nanomateriales en la Industria Textil</td>
+                <td>[Nombres de los panelistas]</td>
+                <td>09:00 - 10:30</td>
+              </tr>
+              <tr>
+                <td>Coffee Break y Networking</td>
+                <td>N/A</td>
+                <td>10:30 - 11:00</td>
+              </tr>
+              <tr>
+                <td>Tema: La Transformación Digital de la Industria Textil</td>
+                <td>[Nombre del experto]</td>
+                <td>11:00 - 12:00</td>
+              </tr>
+              <tr>
+                <td>Tema: Innovación y Competitividad en el Mercado Textil Global</td>
+                <td>[Nombres de los ponentes]</td>
+                <td>12:00 - 13:00</td>
+              </tr>
+              <tr>
+                <td>Almuerzo</td>
+                <td>N/A</td>
+                <td>13:00 - 14:00</td>
+              </tr>
+              <tr>
+                <td>Taller: Cómo Desarrollar Proyectos Colaborativos en Nanotecnología y Textiles</td>
+                <td>[Nombre del instructor]</td>
+                <td>14:00 - 15:30</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <br>
+        <!---->
+
         <!-- Inscripciones -->
         <div class="text-center mb-4">
           <i class="fa fa-pen-alt fa-3x" style="color: #394285;"></i>
@@ -157,13 +304,12 @@ export default {
       isEventStarted: false, // Add this property to control event start message
 
       expositores: [
-        { id: 1, name: 'Juan Pérez', talkTitle: 'Innovaciones en IA', photo: require('@/assets/expositores/mision.png') },
-        { id: 2, name: 'Ana Gómez', talkTitle: 'Tendencias en Tecnología', photo: require('@/assets/expositores/exp1.jpg') },
-        { id: 3, name: 'Ana Gómez', talkTitle: 'Tendencias en Tecnología', photo: require('@/assets/expositores/exp1.jpg') },
-        { id: 4, name: 'Ana Gómez', talkTitle: 'Tendencias en Tecnología', photo: require('@/assets/expositores/exp1.jpg') },
-        { id: 5, name: 'Ana Gómez', talkTitle: 'Tendencias en Tecnología', photo: require('@/assets/expositores/exp1.jpg') },
-        { id: 6, name: 'Ana Gómez', talkTitle: 'Tendencias en Tecnología', photo: require('@/assets/expositores/exp1.jpg') },
-        { id: 7, name: 'Carlos López', talkTitle: 'El Futuro del Big Data', photo: require('@/assets/img/logo-vid.png') }
+        { id: 1, name: '_', talkTitle: '- ', photo: require('@/assets/expositores/exp1.jpg') },
+        { id: 2, name: ' ', talkTitle: ' ', photo: require('@/assets/expositores/exp1.jpg') },
+        { id: 3, name: ' ', talkTitle: ' ', photo: require('@/assets/expositores/exp1.jpg') },
+        { id: 4, name: ' ', talkTitle: ' ', photo: require('@/assets/expositores/exp1.jpg') },
+        { id: 5, name: ' ', talkTitle: ' ', photo: require('@/assets/expositores/exp1.jpg') },
+        { id: 7, name: ' ', talkTitle: ' ', photo: require('@/assets/img/exp1.jpg') }
         // Añadir más expositores según sea necesario
       ]
     };
@@ -298,10 +444,60 @@ p {
   border-radius: 15px;
   /* Ajusta el valor para el redondeo que desees */
 }
+
 /*Redondear Cuadros de Contacto */
 .cuadrado-redondeado {
-        height: 100px;
-        width: 100px;
-        border-radius: 15px; /* Ajusta el valor según lo desees */
-    }
+  height: 100px;
+  width: 100px;
+  border-radius: 15px;
+  /* Ajusta el valor según lo desees */
+}
+
+/*Estilos Tabla*/
+.table-container {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  margin-bottom: 40px;
+  margin: 0 auto; /* Center the table container */
+}
+
+.table-container h2 {
+  background-color: #394285;
+  color: #fff;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.table th {
+  background-color: #394285;
+  color: #fff;
+}
+
+.table td {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .table th, .table td {
+    padding: 8px;
+  }
+}
+
 </style>

@@ -45,7 +45,7 @@
 
   <!-- Feature Start -->
   <div class="container-fluid pb-5" style="padding-top: 100px; position: relative;">
-    <img src="https://i.imgur.com/VFgwOO3.jpeg" alt="Descripción de la imagen"
+    <img src="@/assets/expositores/TEXTIL.jpg" alt="Descripción de la imagen"
       class="img-fluid mx-auto d-block img-redondeada" style="max-width: 100%; height: auto;">
     <div class="container pb-5">
       <!-- Additional Features Start -->
@@ -70,7 +70,7 @@
         <!-- Cronograma -->
         <div class="text-center mb-4">
           <i class="fa fa-calendar-alt fa-3x" style="color: #394285;"></i>
-          <h2 class="mt-2">Cronograma</h2>
+          <h2 class="mt-2">Cronograma de ponencias Congreso Industria Textil y Nanotecnología</h2>
         </div>
 
         <div class="table-container">
@@ -78,41 +78,55 @@
           <table class="table">
             <thead>
               <tr>
-                <th>Actividad</th>
-                <th>Exponente</th>
                 <th>Hora</th>
+                <th>Título de la ponencia</th>
+                <th>Exponente</th>
+                <th>Universidad o Empresa</th>
+                <th>País</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Registro y Entrega de Materiales</td>
-                <td>N/A</td>
-                <td>08:00 - 09:00</td>
+                <td>11:00 - 12:20</td>
+                <td> </td>
+                <td> </td>
+                <td>Cancillería</td>
+                <td>Bolivia</td>
               </tr>
               <tr>
-                <td>Inauguración Oficial</td>
-                <td>N/A</td>
-                <td>09:00 - 09:30</td>
+                <td>16:00 - 16:50</td>
+                <td>Innovación y sostenibilidad: Aplicaciones de la celulosa de bambú en la industria moderna</td>
+                <td>Willam Ricardo Esparza Encalada</td>
+                <td>Universidad Técnica del Norte</td>
+                <td>Ibarra - Ecuador</td>
               </tr>
               <tr>
-                <td>Tema: Innovaciones en la Industria Textil y su Impacto en la Sostenibilidad</td>
-                <td>[Nombre del experto]</td>
-                <td>09:30 - 10:30</td>
+                <td>16:50 - 17:40</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
               </tr>
               <tr>
-                <td>Coffee Break y Networking</td>
-                <td>N/A</td>
-                <td>10:30 - 11:00</td>
+                <td>17:40 - 18:30</td>
+                <td>La produccion primaria de fibra de llama y su relación con el sector textil de moda</td>
+                <td>Hugo Lamas</td>
+                <td>Universidad Nacional de Jujuy</td>
+                <td>Jujuy - Argentina</td>
               </tr>
               <tr>
-                <td>Tema: Evolución de la Industria Textil en la Era de la Nanotecnología</td>
-                <td>[Nombres de los panelistas]</td>
-                <td>11:00 - 12:30</td>
+                <td>18:30 - 19:20</td>
+                <td> </td>
+                <td> </td>
+                <td></td>
+                <td></td>
               </tr>
               <tr>
-                <td>Almuerzo</td>
-                <td>N/A</td>
-                <td>12:30 - 13:30</td>
+                <td>19:20 - 20:00</td>
+                <td> </td>
+                <td> </td>
+                <td></td>
+                <td> </td>
               </tr>
             </tbody>
           </table>
@@ -123,46 +137,47 @@
           <table class="table">
             <thead>
               <tr>
-                <th>Actividad</th>
-                <th>Exponente</th>
                 <th>Hora</th>
+                <th>Título de la ponencia</th>
+                <th>Exponente</th>
+                <th>Universidad o Empresa</th>
+                <th>País</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Bienvenida y Apertura del Día 2</td>
-                <td>N/A</td>
-                <td>08:30 - 09:00</td>
+                <td>16:00 - 16:50</td>
+                <td>Aplicación de un no tejido a base de la fibra de coco en la agricultura hidropónica.</td>
+                <td>Valeria Verónica Chugá Chamorro</td>
+                <td>Universidad Técnica del Norte</td>
+                <td>Ibarra - Ecuador</td>
               </tr>
               <tr>
-                <td>Tema: El Futuro de los Textiles Inteligentes y su Integración en la Vida Cotidiana</td>
-                <td>[Nombre del experto]</td>
-                <td>09:00 - 10:00</td>
+                <td>16:50 - 17:40</td>
+                <td> </td>
+                <td> </td>
               </tr>
               <tr>
-                <td>Tema: Sostenibilidad y Economía Circular en la Industria Textil</td>
-                <td>[Nombres de los panelistas]</td>
-                <td>10:00 - 11:30</td>
+                <td>17:40 - 18:30</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
               </tr>
               <tr>
-                <td>Coffee Break y Networking</td>
-                <td>N/A</td>
-                <td>11:30 - 12:00</td>
+                <td>18:30 - 19:20</td>
+                <td>Aplicaciones de la Nanotecnología en el área textil</td>
+                <td>Diego Alirio Chambi Aguilar</td>
+                <td>Viceministerio de Políticas de Industrialización 
+                  Ministerio de Desarrollo Productivo y Económia Plural</td>
+                <td>Bolivia</td>
               </tr>
               <tr>
-                <td>Tema: Textiles Funcionales para Aplicaciones Especiales</td>
-                <td>[Nombres de los ponentes]</td>
-                <td>12:00 - 13:30</td>
-              </tr>
-              <tr>
-                <td>Almuerzo</td>
-                <td>N/A</td>
-                <td>13:30 - 14:30</td>
-              </tr>
-              <tr>
-                <td>Taller: Procesos de Fabricación Sostenible en Textiles de Alta Tecnología</td>
-                <td>[Nombre del instructor]</td>
-                <td>14:30 - 16:00</td>
+                <td>19:20 - 20:00</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
               </tr>
             </tbody>
           </table>
@@ -173,46 +188,41 @@
           <table class="table">
             <thead>
               <tr>
-                <th>Actividad</th>
-                <th>Exponente</th>
                 <th>Hora</th>
+                <th>Título de la ponencia</th>
+                <th>Exponente</th>
+                <th>Universidad o Empresa</th>
+                <th>País</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Bienvenida y Apertura del Último Día</td>
-                <td>N/A</td>
-                <td>08:30 - 09:00</td>
+                <td>16:00 - 17:00</td>
+                <td>Normas Bolivianas apoyando a la industria - IBNORCA</td>
+                <td>Alejandra Torrelio</td>
+                <td>IBNORCA</td>
+                <td>Bolivia</td>
               </tr>
               <tr>
-                <td>Tema: Desafíos Regulatorios y Normativas en el Uso de Nanomateriales en la Industria Textil</td>
-                <td>[Nombres de los panelistas]</td>
-                <td>09:00 - 10:30</td>
+                <td>17:00 - 18:00</td>
+                <td>Nanotecnologia en textiles: manipulacion de fenomenos quimicos y fisicos para crear fibras multifuncionales</td>
+                <td>Juan Hinestroza</td>
+                <td>Cornell University</td>
+                <td>EEUU</td>
               </tr>
               <tr>
-                <td>Coffee Break y Networking</td>
-                <td>N/A</td>
-                <td>10:30 - 11:00</td>
+                <td>18:00 - 19:00</td>
+                <td>Pasarela de moda UPCYCLING</td>
+                <td>Organizadores</td>
+                <td></td>
+                <td></td>
               </tr>
               <tr>
-                <td>Tema: La Transformación Digital de la Industria Textil</td>
-                <td>[Nombre del experto]</td>
-                <td>11:00 - 12:00</td>
-              </tr>
-              <tr>
-                <td>Tema: Innovación y Competitividad en el Mercado Textil Global</td>
-                <td>[Nombres de los ponentes]</td>
-                <td>12:00 - 13:00</td>
-              </tr>
-              <tr>
-                <td>Almuerzo</td>
-                <td>N/A</td>
-                <td>13:00 - 14:00</td>
-              </tr>
-              <tr>
-                <td>Taller: Cómo Desarrollar Proyectos Colaborativos en Nanotecnología y Textiles</td>
-                <td>[Nombre del instructor]</td>
-                <td>14:00 - 15:30</td>
+                <td>19:00 - 20:00</td>
+                <td>Pasarela de moda UPCYCLING</td>
+                <td>Organizadores</td>
+                <td></td>
+                <td></td>
               </tr>
             </tbody>
           </table>
@@ -249,7 +259,7 @@
             </div>
             <div class="d-flex flex-column">
               <h5 class="">Celular</h5>
-              <p class="m-0 ">{{ Institucion.institucion_celular1 }}</p>
+              <p class="m-0 ">75408968</p>
               <p class="m-0 ">{{ Institucion.institucion_celular2 }}</p>
             </div>
           </div>
@@ -274,7 +284,8 @@
     </div>
     <!-- Location Title and Map -->
     <h2 class="text-center mb-4">Ubicación</h2>
-    <iframe :src="Institucion.institucion_api_google_map" width="100%" height="600px" frameborder="0"></iframe>
+    <!-- <iframe :src="Institucion.institucion_api_google_map" width="100%" height="600px" frameborder="0"></iframe> -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.554706634767!2d-68.1355719!3d-16.4980703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f21d239bc736d%3A0xa771bdd9fa67fc3b!2scentro%20de%20comunicaciones%20la%20paz!5e0!3m2!1sen!2sbo!4v1728500866473!5m2!1sen!2sbo" width="100%" height="600px" frameborder="0"></iframe>
   </div>
   <!-- Feature End -->
 </template>
@@ -304,12 +315,12 @@ export default {
       isEventStarted: false, // Add this property to control event start message
 
       expositores: [
-        { id: 1, name: '_', talkTitle: '- ', photo: require('@/assets/expositores/exp1.jpg') },
-        { id: 2, name: ' ', talkTitle: ' ', photo: require('@/assets/expositores/exp1.jpg') },
-        { id: 3, name: ' ', talkTitle: ' ', photo: require('@/assets/expositores/exp1.jpg') },
-        { id: 4, name: ' ', talkTitle: ' ', photo: require('@/assets/expositores/exp1.jpg') },
-        { id: 5, name: ' ', talkTitle: ' ', photo: require('@/assets/expositores/exp1.jpg') },
-        { id: 7, name: ' ', talkTitle: ' ', photo: require('@/assets/img/exp1.jpg') }
+        { id: 1, name: 'Willam Ricardo Esparza Encalada', talkTitle: 'Universidad Técnica del Norte', photo: require('@/assets/expositores/exp1.jpg') },
+        { id: 2, name: 'Hugo Lamas', talkTitle: 'Universidad Nacional de Jujuy', photo: require('@/assets/expositores/exp1.jpg') },
+        { id: 3, name: 'Valeria Verónica Chugá Chamorro', talkTitle: 'Universidad Técnica del Norte', photo: require('@/assets/expositores/Valeria.jpg') },
+        { id: 4, name: 'Diego Alirio Chambi Aguilar', talkTitle: 'Viceministerio de Políticas de Industrialización ', photo: require('@/assets/expositores/exp1.jpg') },
+        { id: 5, name: 'Alejandra Torrelio', talkTitle: 'IBNORCA', photo: require('@/assets/expositores/Alejandra.jpeg') },
+        { id: 7, name: 'Juan Hinestroza', talkTitle: 'Cornell University', photo: require('@/assets/expositores/Juan.jpg') }
         // Añadir más expositores según sea necesario
       ]
     };

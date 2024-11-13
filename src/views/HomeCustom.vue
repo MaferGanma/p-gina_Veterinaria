@@ -1124,11 +1124,11 @@
         <div id="header-carousel" class="carousel slide" data-ride="carousel" >
             <div class="carousel-inner" >
                 <div class="carousel-item  active">                  
-                    <img class="img-portada animacion-carousel" src="assets/img/header-ambiental.jpg" alt="Image" style="height: 700px;">
+                    <img class="img-portada animacion-carousel" src="assets/img/veterinaria-img1.jpg" alt="Image" style="height: 700px;">
                     
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
-                          <h4 class="text-white text-uppercase mb-md-3 animated fadeInRight animacion-titulo texto-sub-titulo">BIENVENIDOS A NUESTRA</h4>
+                          <h4 class="text-white text-uppercase mb-md-3 animated fadeInRight animacion-titulo texto-sub-titulo">BIENVENIDOS A LA CARRERA DE</h4>
                             <h1 class="display-3 text-white mb-md-4 animated fadeInLeft texto-titulo">{{ Institucion.institucion_nombre }}</h1>
                             <a href="#novedades" @click="scrollInto('novedades')" class="btn btn-primary py-md-3 px-md-5 mt-2 animated fadeInUp">NOVEDADES</a>
                         </div>
@@ -1164,7 +1164,7 @@
             <div class="row">
                 <div class="col-lg-6" style="min-height: 500px;">
                     <div class="position-relative h-100 animated fadeInLeft">
-                        <img class="position-absolute w-100 h-100" src="assets/img/ingenieria-ambiental-img1.jpg" style="object-fit: cover;">
+                        <img class="position-absolute w-100 h-100" src="assets/img/veterinaria-img1.jpg" style="object-fit: cover;">
                     </div>
                 </div>
                 <div class="col-lg-6 pt-5 pb-lg-5">

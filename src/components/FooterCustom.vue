@@ -63,13 +63,15 @@
                 </p>
             </div>
             <div class="col-lg-4 text-center">
+                <a href="https://utic.upea.bo">
                 <img class="filtro-logo animacion-logo-sie" src="https://i.imgur.com/RAwBKD1.png"
                 alt="img"
                 width="80" style="animation-delay: 1s;filter:drop-shadow(2px 4px 6px rgb(5, 28, 200))"                  
-              />
+              /></a>
             </div>
             <div class="col-lg-4 text-center text-md-right">
-                <p class="m-0 text-white-50">Designed by <a href="https://sie.upea.bo">GAO-SIE</a>
+                <p class="m-0 text-white-50">Designed by <a href="https://sie.upea.bo">GAO-UTIC</a> |
+                    Additional by <a href="https://www.behance.net/aramidanra">Arami</a> 
                 </p>
             </div>
         </div>
